@@ -4,21 +4,28 @@ body {
 
 .img_list {
     width: 100%;
+    padding: 20px;
+    background-color: #1C1C1C;
 }
 
 .img_list tr td {
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #1C1C1C;
     border: none;
+    box-shadow: 2px 2px 8px #111111;
 
     transform: skewY(0deg);
-    transition: transform 1s;
+
+    /* transition-delay: 0.1s; */
+    transition-duration: 0.9s;
+    transition-property: box-shadow transform;
 }
 
 .img_list tr td:hover {
-    transform: skewY(-25deg);
+    box-shadow: 2px 2px 8px #111111;
+    transform: skewY(-15deg);
+    transform:
 }
 
 #box1 {
