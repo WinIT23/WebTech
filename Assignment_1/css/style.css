@@ -3,9 +3,16 @@ body {
 }
 
 .img_list {
-    width: 100%;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 99%;
     padding: 20px;
     background-color: #1C1C1C;
+    box-shadow: -2px -2px 6px rgba(70, 70, 70, 0.5)
+        ,
+                4px 4px 6px rgba(1, 1, 1, 0.7);
+    border-radius: 8px;
 }
 
 .img_list tr td {
@@ -25,7 +32,6 @@ body {
 .img_list tr td:hover {
     box-shadow: 2px 2px 8px #111111;
     transform: skewY(-15deg);
-    transform:
 }
 
 #box1 {
