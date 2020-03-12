@@ -1,0 +1,56 @@
+body {
+    background-color: #121212;
+}
+
+.img_list {
+    width: 100%;
+}
+
+.img_list tr td {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1C1C1C;
+    border: none;
+
+    transform: skewY(0deg);
+    transition: transform 1s;
+}
+
+.img_list tr td:hover {
+    transform: skewY(-25deg);
+}
+
+#box1 {
+    width: 12.5%;
+    background-image: url(../res/1.png);
+}
+
+#box2 {
+    width: 12.5%;
+    background-image: url(../res/2.png);
+}
+#box3 {
+    width: 12.5%;
+    background-image: url(../res/3.png);
+}
+#box4 {
+    width: 12.5%;
+    background-image: url(../res/4.png);
+}
+#box5 {
+    width: 12.5%;
+    background-image: url(../res/5.png);
+}
+#box6 {
+    width: 12.5%;
+    background-image: url(../res/6.png);
+}
+#box7 {
+    width: 12.5%;
+    background-image: url(../res/7.png);
+}
+#box8 {
+    width: 12.5%;
+    background-image: url(../res/8.png);
+}
