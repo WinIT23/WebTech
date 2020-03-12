@@ -27,7 +27,7 @@
                 background-color : rgb(17, 36, 47);
                 box-shadow : 4px 4px 10px #777777;
                 border : none;
-                font-size : 2em;
+                font-size : 1.5em;
                 color : white;
                 margin : 4em;
                 text-align : center;
@@ -35,11 +35,11 @@
                 height : 150px;
                 width : 150px;
 
-                transition : font-size 2s;
-                transition : height 2s;
                 transform : width 2s;
-                transform : rotate(90deg);
-                transition : transform 2s;
+                transform : rotate(360deg);
+                transition-property: : font-size height transform;
+                transition-delay: 0.1s;
+                transition-duration: 2s;
             }
         </style>
 
