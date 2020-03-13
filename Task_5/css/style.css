@@ -1,0 +1,35 @@
+body {
+    background-color: #1C1C1C;
+}
+
+.class1 {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../res/Wall.png");
+    transform: skewY(0deg);
+    animation-name: ani1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ani1 {
+    0% {
+        background-image: url("../res/Wall.png");
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        background-image: url("../res/Wall.png");
+        transform: rotateY(90deg);
+    }
+    51% {
+        background-image: url("../res/Wall2.png");
+        transform: rotateY(90deg);
+    }
+    100% {
+        background-image: url("../res/Wall2.png");
+        transform: rotateY(180deg);
+    }
+
+}
