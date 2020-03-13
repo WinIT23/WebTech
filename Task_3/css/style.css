@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(255, 250, 242);
+}
+body div {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    font-size: 24px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+}
+
+.class1 { /* Blue one */
+    top: 150px;
+    left: 150px;
+    z-index: 5;
+    transform: rotate(30deg);
+    background-color: rgba(100, 162, 230, 1);
+    box-shadow: 4px 4px 10px rgba(70, 70, 70, 0.6);
+}
+
+.class2 { /* Orange one */
+    top: 290px;
+    left: 225px;
+    z-index: 1;
+    transform: rotate(95deg);
+    background-color: rgba(233, 162, 97, 1);
+    box-shadow: 4px -4px 10px rgba(70, 70, 70, 0.6);
+}
+
+.class3 { /* Green one */
+    top: 339px;
+    left: 475px;
+    z-index: -1;
+    transform: rotate(20deg);
+    background-color: rgba(186, 235, 95, 1);
+    box-shadow: 4px 4px 10px rgba(70, 70, 70, 0.6);
+}
+
+.class4 { /* Yellow one */
+    top: 355px;
+    left: 35px;
+    z-index: 4;
+    transform: rotate(125deg);
+    background-color: rgba(236, 228, 94, 1);
+    box-shadow: 4px -4px 10px rgba(70, 70, 70, 0.6);
+}
+
+.class5 { /* Purple one */
+    top: 175px;
+    left: 475px;
+    z-index: -2;
+    transform: rotate(-20deg);
+    background-color: rgba(194, 151, 230, 1);
+    box-shadow: 4px 4px 10px rgba(70, 70, 70, 0.6);
+}
