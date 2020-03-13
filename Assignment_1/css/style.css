@@ -22,6 +22,8 @@ body {
     border: none;
     box-shadow: 2px 2px 8px #111111;
 
+    padding: 0px;
+
     transform: skewY(0deg);
 
     /* transition-delay: 0.1s; */
