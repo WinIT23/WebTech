@@ -2,44 +2,41 @@ body {
     background-color: #121212;
 }
 
-.img_list {
+.container {
+    z-index: 2;
     position: absolute;
     top: 20%;
     left: 18%;
-    z-index: 2;
     width: 1110px;
     height: 580px;
-    background-color: #121212;
-    box-shadow: -4px -4px 8px rgba(70, 70, 70, 0.5),
-            inset 4px 4px 8px rgba(70, 70, 70, 0.3)
-        ,
-            inset -6px -6px 10px rgba(1, 1, 1, 0.3),
-                6px 6px 10px rgba(1, 1, 1, 0.5);
+    background-color: inherit;
     border-radius: 16px;
+
+    box-shadow: -4px -4px 8px rgba(70, 70, 70, 0.5),
+            inset 4px 4px 8px rgba(70, 70, 70, 0.4)
+        ,
+            inset -6px -6px 10px rgba(1, 1, 1, 0.4),
+                6px 6px 10px rgba(1, 1, 1, 0.5);
 }
 
-.img_list div {
+.white{
     position: absolute;
     top: 40px;
     z-index: 3;
     height: 500px;
     width: 125px;
     border-radius: 8px;
-    background-color: #1C1C1C;/* rgba(255, 255, 240, 0.75); */
+    background-color: #232323;/* rgba(255, 255, 240, 0.75); */
 
-    box-shadow: -2px -2px 4px rgba(70, 70, 70, 0.5),
-            inset 2px 2px 4px rgba(70, 70, 70, 0.3)
+    box-shadow: -2px -2px 4px rgba(70, 70, 70, 0.7),
+            inset 2px 2px 4px rgba(70, 70, 70, 0.4)
         ,
-            inset -3px -3px 5px rgba(1, 1, 1, 0.3),
-                3px 3px 5px rgba(1, 1, 1, 0.5);
+            inset -3px -3px 5px rgba(1, 1, 1, 0.4),
+                3px 3px 5px rgba(1, 1, 1, 0.7);
 
-    /* transition-delay: 0.1s; */
-    /* transition-duration: 0.9s;
-    transition-property: box-shadow transform; */
 }
 
-.img_list div:active {
-
+.white:active {
     animation-name: shadowEffect;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
@@ -49,24 +46,50 @@ body {
     from {
         transform: scale(1);
 
-        box-shadow: -2px -2px 4px rgba(70, 70, 70, 0.5),
-                inset 2px 2px 4px rgba(70, 70, 70, 0.3)
+        box-shadow: -2px -2px 4px rgba(70, 70, 70, 0.7),
+                inset 2px 2px 4px rgba(70, 70, 70, 0.4)
             ,
-                inset -3px -3px 5px rgba(1, 1, 1, 0.3),
-                    3px 3px 5px rgba(1, 1, 1, 0.5);
+                inset -3px -3px 5px rgba(1, 1, 1, 0.4),
+                    3px 3px 5px rgba(1, 1, 1, 0.7);
 
     }
     to {
         transform: scale(0.98);
 
-        box-shadow: 2px 2px 4px rgba(70, 70, 70, 0.5),
-                inset -2px -2px 4px rgba(70, 70, 70, 0.3)
+        box-shadow: 2px 2px 4px rgba(70, 70, 70, 0.7),
+                inset -2px -2px 4px rgba(70, 70, 70, 0.4)
             ,
-                inset 3px 3px 5px rgba(1, 1, 1, 0.3),
-                    -3px -3px 5px rgba(1, 1, 1, 0.5);
+                inset 3px 3px 5px rgba(1, 1, 1, 0.4),
+                    -3px -3px 5px rgba(1, 1, 1, 0.7);
 
     }
 }
+
+.black {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    height: 290px;
+    width: 60px;
+    border-radius: 4px;
+    background-color: #0F0F0F;
+
+    box-shadow: -2px -2px 4px rgba(70, 70, 70, 0.7),
+            inset 2px 2px 4px rgba(70, 70, 70, 0.4)
+        ,
+            inset -3px -3px 5px rgba(1, 1, 1, 0.4),
+                3px 3px 5px rgba(1, 1, 1, 0.7);
+
+}
+
+.black:hover {
+    animation-name: shadowEffect;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+
+}
+
 
 #box1 {
     left: 40px;
