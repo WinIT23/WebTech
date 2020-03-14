@@ -11,6 +11,22 @@ body div {
     border-radius: 15px;
 }
 
+body div:hover {
+    z-index: 10;
+    animation-name: ani1;
+    animation-duration: 1s;
+}
+
+@keyframes ani1 {
+    from {
+        box-shadow: 4px 4px 10px rgba(70, 70, 70, 0.6);
+        transform: scale(1);
+    } to {
+        box-shadow: 6px 6px 20px rgba(70, 70, 70, 0.6);
+        transform: scale(1.1);
+    }
+}
+
 .class1 { /* Blue one */
     top: 150px;
     left: 150px;
