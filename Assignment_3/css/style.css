@@ -1,0 +1,73 @@
+body {
+    background-color: #121212;
+}
+
+div {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+    height: 700px;
+    width: 500px;
+
+    border-radius: 16px;
+
+}
+
+.notebook {
+    z-index: 1;
+
+    background-color: #121212;
+
+    box-shadow: -4px -4px 18px rgba(70, 70, 70, 0.7),
+            inset 4px 4px 8px rgba(70, 70, 70, 0.5)
+        ,
+            inset -6px -6px 10px rgba(1, 1, 1, 0.5),
+            10px 10px 10px rgba(1, 1, 1, 0.7);
+
+    border-color: #121212;
+    border-width: 4px;
+}
+
+.page {
+    z-index: -1;
+
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+    font-size: 24px;
+    color: #121212;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url("../res/paper.jpg"); */
+    background-blend-mode: lighten;
+}
+
+#cp {
+    z-index: -10;
+}
+
+#cp span{
+    height: inherit;
+    width: inherit;
+
+    margin: 100px;
+}
+#ae {
+    z-index: -2;
+
+}
+#it {
+    z-index: -3;
+
+}
+#me {
+    z-index: -4;
+
+}
+#ft {
+    z-index: -5;
+
+}
