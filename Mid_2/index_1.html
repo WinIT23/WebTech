@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Question 1</title>
+        <style>
+            .container {
+                position: absolute;
+                width: 600px;
+                height: 450px;
+                border-spacing: 0px;
+
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+
+            .square-hidden {
+                height: 36px;
+                width: 36px;
+                border: none;
+            }
+
+            .num {
+                z-index: 2;
+                position: relative;
+                top: 5px;
+                left: 5px;
+                text-align: left;
+                font-size: 0.5em;
+                line-height: 1em;
+            }
+
+            .text {
+                z-index: 2;
+                padding: 10px;
+                text-align: center;
+                font-size: 15px;
+            }
+
+            .square {
+                height: 35px;
+                width: 35px;
+                margin: -1px 0;
+                border: 1px solid black;
+            }
+
+            .line {
+                float: left;
+            }
+
+            .line:nth-child(n+2) {
+                margin-left: -1px;
+            }
+
+            .window {
+                z-index: 5;
+                position: absolute;
+                transform: scale(1.2);
+                background-color: white;
+
+                animation-name: an1;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes an1 {
+                from {
+                    height: 100%;
+                    top: 0px;
+                }
+
+                to {
+                    height: 0%;
+                    top: 720px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div class="container">
+            <table>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="">
+                        <span class="num">2</span>
+                        <span class="text">I</span></td>
+                    <td class="">N</td>
+                    <td class="">D</td>
+                    <td class="">I</td>
+                    <td class="">A</td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+                <tr>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class=""></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                    <td class="hidden"></td>
+                </tr>
+
+            </table>
+        </div> -->
+        <div class="window container">
+
+        </div>
+        <div class="container">
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="num">2</div>
+                    <div class="text" style="padding: 0px;">I</div>
+                </div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="text">N</div>
+                </div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="text">D</div>
+                </div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="text">I</div>
+                </div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <div class="num">2</div>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <div class="text">A</div>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <div class="num">10</div>
+                </div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="num">10</div>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="num">4</div>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <div class="num">5</div>
+                </div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="num">9</div>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square">
+                    <div class="num">3</div>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="num">4</div>
+                </div>
+                <div class="square"></div>
+                <div class="square">
+                    <div class="num">7</div>
+                </div>
+                <div class="square-hidden"></div>
+                <div class="square">
+                    <div class="num">12</div>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+            <div class="line">
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+                <div class="square-hidden"></div>
+            </div>
+        </div>
+    </body>
+
+</html>

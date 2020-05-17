@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Question 2</title>
+        <style>
+            .reverse {
+                z-index: 4;
+                margin-left: -13px;
+                margin-top: -2px;
+                transform: rotate(180deg);
+            }
+
+            @-webkit-keyframes blinker {
+                0% {
+                    opacity: 1.0;
+                }
+
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1.0;
+                }
+            }
+
+            .container div {
+                float: left;
+                font-weight: 700;
+                font-size: 4em;
+            }
+
+            .container div {
+                animation-name: blinker;
+                animation-duration: 0.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-direction: alternate;
+            }
+
+            .container:hover div {
+                -webkit-animation-duration: 1.2s;
+            }
+
+            .a {}
+
+            .b {
+                animation-delay: 0.1s;
+            }
+
+            .c {
+                animation-delay: 0.2s;
+            }
+
+            .d {
+                margin-left: -2px;
+                animation-delay: 0.3s;
+            }
+
+            .e {
+                animation-delay: 0.4s;
+            }
+
+            .f {
+                animation-delay: 0.5s;
+            }
+
+            .g {
+
+                animation-delay: 0.6s;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="a">A</div>
+            <div class="reverse b">A</div>
+            <div class="c" style="margin: 0 -2px;">D</div>
+            <div class="reverse d">D</div>
+            <div class="e" style="margin:0 -4px">I</div>
+            <div class="f" style="margin-right: 5px;">T</div>
+            <div class="reverse g">T</div>
+        </div>
+    </body>
+
+</html>
