@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: #121212;
+    color: white;
+}
+
+
+.container {
+    margin: 100px auto;
+    border-radius: 15px;
+    width: 400px;
+    background-color: #1C1C1C;
+    box-shadow: -4px -4px 8px rgba(70, 70, 70, 0.5),
+            inset 4px 4px 8px rgba(70, 70, 70, 0.4)
+        ,
+            inset -6px -6px 10px rgba(1, 1, 1, 0.4),
+                6px 6px 10px rgba(1, 1, 1, 0.5);
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
