@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+
+body {
+	background-color: #121212;
+	margin: 0;
+	font-family: 'Fira Sans', 'Roboto', 'Avenir';
+}
+
+.warning {
+	opacity: 0;
+	height: 0;
+}
+
+/* small screen warning */
+@media only screen and (max-width: 720px) {
+  .warning {
+	  z-index: 5;
+	  opacity: 1;
+	  position: fixed;
+	  top:0;
+	  left:0;
+	  width:100%;
+	  height:100%;
+	  background: rgba(0,0,0,1) none 50% /50% no-repeat;
+	  background-position: center;
+  }
+
+  .warning div {
+	  color: #aaa;
+	  margin: 50% 30%;
+  }
+}
+
+
+
+/* Overlay */
+#overlay{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.8) none 50% /50% no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.close {
+	opacity: 0;
+	z-index: -10;
+	transition: opacity 0.5s;
+}
+
+.open {
+	opacity: 1;
+	z-index: 3;
+	transition: opacity 0.5s;
+}
+
+#overlay:after { /* X button icon */
+	content: "\2715";
+	position: absolute;
+	color:#fff;
+	top: 10px;
+	right:20px;
+	font-size: 2em;
+}
+
+/* Nav bar */
+
+.navbar {
+	z-index: 2;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	padding: 15px 0 15px 0;
+	background-color: #1C1C1C;
+	font-family: 'Pacifico', cursive, sans-serif;
+	border-radius: 0 0 10px 10px;
+}
+
+.navbar div a {
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+.left a {
+	float: left;
+	margin-top: -15px;
+	margin-left: 30px;
+	font-size: 30px;
+}
+
+.header a,
+.big-logo {
+  animation: glow 2500ms linear infinite 2000ms
+  ,	colorchange 3s infinite alternate;
+}
+
+@keyframes glow {
+	30% {
+		text-shadow: 0 0 0px #aaa;
+	}
+
+	40% {
+		text-shadow: 0 0 4px #aaa;
+	}
+	50% {
+		text-shadow: 0 0 0px #aaa;
+	}
+
+	60% {
+		text-shadow: 0 0 4px #aaa;
+	}
+	100% {
+		text-shadow: 0 0 0px #aaa;
+	}
+}
+@keyframes colorchange {
+  0% {
+
+	color: #db584f;
+  }
+
+  10% {
+
+	color: #edb75f;
+  }
+
+  20% {
+
+	color: #eded5f;
+  }
+
+  30% {
+
+	color: #87e85d;
+  }
+
+  40% {
+
+	color: #5be3a8;
+  }
+
+  50% {
+
+	color: #5daee8;
+  }
+
+  60% {
+
+	color: #5b5dde;
+  }
+
+  70% {
+
+	color: #8654d6;
+  }
+  80% {
+
+	color: #c853cf;
+  }
+
+  90% {
+
+	color: #ba5080;
+  }
+
+  100% {
+
+	color: #db584f;
+  }
+}
+
+.center {
+	position: absolute;
+	top: 11px;
+	left: 39.5%;
+	transform: translate(-50%, -50%)
+	display: inline-block;
+}
+.center input {
+	width: 250px;
+	height: 20px;
+	justify-content: center;
+	display: inline-block;
+	text-align: center;
+	text-decoration-color: white;
+	background-color: #232323;
+	color: #aaa;
+	border-width: 1px;
+	border-color: #555;
+	border-radius: 5px;
+	border-style: solid;
+}
+
+.center input:focus {
+	outline: none;
+	border: none;
+	box-shadow: 2px 2px 4px rgba(70, 70, 70, 0.7),
+                inset -2px -2px 4px rgba(70, 70, 70, 0.4)
+            ,
+                inset 3px 3px 5px rgba(1, 1, 1, 0.4),
+                    -3px -3px 5px rgba(1, 1, 1, 0.7);
+
+}
+
+.right {
+	float: right;
+}
+
+/* Profile picture & info */
+
+.table table {
+	width: 100%;
+	padding: 5% 25% 2% 25%;
+	color: #aaa;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.table img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 0 20px #000000;
+}
+
+.table button {
+	width: 150px;
+	height: 25px;
+	text-align: center;
+	text-decoration-color: white;
+	background-color: #232323;
+	color: #aaa;
+	font-size: 12px;
+	border-width: 0;
+	border-radius: 5px;
+}
+
+.table button:focus {
+	outline: none;
+}
+
+.table button:active {
+	font-size: 11.5px;
+	box-shadow: 2px 2px 4px rgba(70, 70, 70, 0.7),
+                inset -2px -2px 4px rgba(70, 70, 70, 0.4)
+            ,
+                inset 3px 3px 5px rgba(1, 1, 1, 0.4),
+                    -3px -3px 5px rgba(1, 1, 1, 0.7);
+}
+
+hr {
+	width: 70%;
+	height: 1px;
+	border-width: 0px;
+	background-color: #666;
+}
+
+/* Image Grid */
+.container {
+	width: 720px;
+	height: auto;
+	margin: 20px auto;
+	background-color: #1C1C1C;
+	border-radius: 10px;
+}
+
+.row {
+	width: 100%;
+}
+
+.image {
+	height: 200px;
+	width: 200px;
+
+	display: inline-block;
+	margin: 20px;
+	border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.image:hover {
+	transform: scale(1.1);
+	filter: sepia(1);
+	transition: all 0.3s;
+}
+
+/* footer */
+
+.footer {
+	background-color: #1C1C1C;
+	color: #aaa;
+	padding: 20px 0;
+	border-radius: 10px 10px 0 0;
+}
+
+.footer div {
+	display: inline-block;
+}
+
+#l {
+	width: 32%;
+	float: left;
+	margin-left: 20px;
+}
+
+#c{
+	width: 32%;
+	text-align: center;
+}
+
+#r {
+	width: 32%;
+	float: right;
+	margin-right: 20px;
+	text-align: right;
+}
+
+/* logo.html */
+
+.big-logo {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	font-size: 10em;
+	font-family: 'Pacifico', cursive, sans-serif;
+}
+
+.back a {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+}
